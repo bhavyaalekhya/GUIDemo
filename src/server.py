@@ -54,240 +54,90 @@ NOT_SURE = "NotSure"
 ERROR = "Error"
 SUB_STEPS = "SubSteps"
 
-COFFEE_STATE_TEMPLATE = [{"Title": "Step 1:\n",
-						  "SubSteps": [{"Title": "1. Take bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "2. Fill water using measure bowl\n", "Done": 0, "NotSure": 0,
-										"Error": 0}, {"Title": "3. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "4. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "5. Pour water\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-						 {"Title": "Step 2:\n",
-						  "SubSteps": [{"Title": "1. Take Filter cone\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "2. Take mug\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "3. Place the filter cone on top of mug\n", "Done": 0, "NotSure": 0,
-										"Error": 0}]}, {"Title": "Step 3:\n", "SubSteps": [
-		{"Title": "1. Take Paper filter\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Prepare Paper filter half\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "3. Prepare Paper filter quarter\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "4. Put Paper filter into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 4:\n",
-																								 "SubSteps": [{
-																									 "Title": "1. Take the kitchen scale\n",
-																									 "Done": 0,
-																									 "NotSure": 0,
-																									 "Error": 0},
-																									 {
-																										 "Title": "2. Take the coffee beans with container on the scale\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "3. Take the coffee grinder\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "4. Open the coffee grinder\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "5. Pour the coffee beans into the grinder\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "6. Cover the lid of grinder\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "7. Grind coffee beans\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "8. Take the dripper\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "9. Open the coffee grinder\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0},
-																									 {
-																										 "Title": "10. Transfer the grounds to the filter cone\n",
-																										 "Done": 0,
-																										 "NotSure": 0,
-																										 "Error": 0}]},
-						 {"Title": "Step 5:\n",
-						  "SubSteps": [{"Title": "1. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "2. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "3. Take the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "4. Put the thermometer into kettle\n", "Done": 0, "NotSure": 0,
-										"Error": 0},
-									   {"Title": "5. Take out the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
-									   {"Title": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-						 {"Title": "Step 6:\n", "SubSteps": [
-							 {"Title": "1. Take the dripper with grounds coffee\n", "Done": 0, "NotSure": 0,
-							  "Error": 0},
-							 {"Title": "2. Pour a small amount of water into dripper\n", "Done": 0, "NotSure": 0,
-							  "Error": 0}]}, {"Title": "Step 7:\n", "SubSteps": [
-		{"Title": "1. Pour the rest of the water over the grounds in a circular motion\n", "Done": 0, "NotSure": 0,
-		 "Error": 0}]}, {"Title": "Step 8:\n",
-						 "SubSteps": [{"Title": "1. Removing the dripper\n", "Done": 0, "NotSure": 0, "Error": 0},
-									  {"Title": "2. Discard the paper filter and coffee grounds.", "Done": 0,
-									   "NotSure": 0, "Error": 0}]}]
-MUGCAKE_STATE_TEMPLATE = [{"Title": "Step 1:\n",
-						   "SubSteps": [{"Title": "1. Take the mug\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "2. Take the paper cake liner\n", "Done": 0, "NotSure": 0,
-										 "Error": 0},
-										{"Title": "3. Place the paper cake liner inside the mug\n", "Done": 0,
-										 "NotSure": 0, "Error": 0},
-										{"Title": "4. Set aside the mug\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-						  {"Title": "Step 2:\n",
-						   "SubSteps": [{"Title": "1. Take the bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "2. Add flour to the mixing bowl\n", "Done": 0, "NotSure": 0,
-										 "Error": 0},
-										{"Title": "3. Add sugar to the mixing bowl\n", "Done": 0, "NotSure": 0,
-										 "Error": 0},
-										{"Title": "4. Add baking powder to the mixing bowl\n", "Done": 0, "NotSure": 0,
-										 "Error": 0},
-										{"Title": "5. Add salt to the mixing bowl\n", "Done": 0, "NotSure": 0,
-										 "Error": 0}]}, {"Title": "Step 3:\n", "SubSteps": [
-		{"Title": "1. Take the whisk\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Use the whisk to combine\n", "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 4:\n",
-																							"SubSteps": [{
-																								"Title": "1. Add oil to the mixing bowl\n",
-																								"Done": 0,
-																								"NotSure": 0,
-																								"Error": 0},
-																								{
-																									"Title": "2. Add water to the mixing bowl\n",
-																									"Done": 0,
-																									"NotSure": 0,
-																									"Error": 0},
-																								{
-																									"Title": "3. Add vanilla to the mixing bowl\n",
-																									"Done": 0,
-																									"NotSure": 0,
-																									"Error": 0}]},
-						  {"Title": "Step 5:\n",
-						   "SubSteps": [{"Title": "1. Take the whisk\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "2. Use the whisk to combine\n", "Done": 0, "NotSure": 0,
-										 "Error": 0}]}, {"Title": "Step 6:\n", "SubSteps": [
-		{"Title": "1. Take the mug\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Pour the batter into the mug\n", "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 7:\n",
-																								"SubSteps": [{
-																									"Title": "1. Open the microwave\n",
-																									"Done": 0,
-																									"NotSure": 0,
-																									"Error": 0},
-																									{
-																										"Title": "2. Put the mug into the microwave\n",
-																										"Done": 0,
-																										"NotSure": 0,
-																										"Error": 0},
-																									{
-																										"Title": "3. Close the microwave\n",
-																										"Done": 0,
-																										"NotSure": 0,
-																										"Error": 0},
-																									{
-																										"Title": "4. Microwave the mug and batter\n",
-																										"Done": 0,
-																										"NotSure": 0,
-																										"Error": 0}]},
-						  {"Title": "Step 8:\n",
-						   "SubSteps": [{"Title": "1. Open the microwave\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "2. Take the mug\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "3. Take the toothpick\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "4. Insert the toothpick into the center of the cake\n", "Done": 0,
-										 "NotSure": 0, "Error": 0},
-										{"Title": "5. Take the toothpick to do the wet batter cling test\n", "Done": 0,
-										 "NotSure": 0, "Error": 0},
-										{"Title": "6. If wet batter clings to the toothpick\n", "Done": 0, "NotSure": 0,
-										 "Error": 0},
-										{"Title": "7. Open Microwave\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "8. Put the mug into the microwave\n", "Done": 0, "NotSure": 0,
-										 "Error": 0},
-										{"Title": "9. Close the Microwave\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "10. Microwave for additional 5 seconds\n", "Done": 0, "NotSure": 0,
-										 "Error": 0}, {
-											"Title": "11. Wet batter does not cling to the toothpick continue to the next step\n",
-											"Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 9:\n", "SubSteps": [
-		{"Title": "1. Take the plate\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Invert the mug to release the cake onto a plate\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "3. Allow to cool\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "4. Carefully remove paper liner\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-						  {"Title": "Step 10: prepare to pipe for frosting\n",
-						   "SubSteps": [{"Title": "1. Take spoon\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "2. Take zip-top bag\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "3. Scoop 4 spoonfuls of chocolate frosting into a zip-top bag\n",
-										 "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "4. Seal the zip-top bag\n", "Done": 0, "NotSure": 0, "Error": 0},
-										{"Title": "5. Remove as much air as possible\n", "Done": 0, "NotSure": 0,
-										 "Error": 0}]}, {"Title": "Step 11:\n", "SubSteps": [
-		{"Title": "1. Take the scissors\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Cut one corner of the bag to create small opening\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-						  {"Title": "Step 12:\n", "SubSteps": [{
-							  "Title": "1. Squeeze the frosting through the opening to apply small dollops of frosting to the plate in a circle around the base of the cake.\n",
-							  "Done": 0, "NotSure": 0, "Error": 0}]},
-						  {"Title": "Step 13:\n",
-						   "SubSteps": [{"Title": "1. Show the cake", "Done": 0, "NotSure": 0, "Error": 0}]}]
-PINWHEELS_STATE_TEMPLATE = [{"Title": "Step 1:\n",
-							 "SubSteps": [{"Title": "1. Take Cutting Board\n", "Done": 0, "NotSure": 0, "Error": 0},
-										  {"Title": "2. Place tortilla on cutting board\n", "Done": 0, "NotSure": 0,
-										   "Error": 0}]}, {"Title": "Step 2:\n", "SubSteps": [
-	{"Title": "1. Take butter knife\n", "Done": 0, "NotSure": 0, "Error": 0},
-	{"Title": "2. Take nut butter jar\n", "Done": 0, "NotSure": 0, "Error": 0},
-	{"Title": "3. Scoop nut butter from butter jar using butter knife\n", "Done": 0, "NotSure": 0, "Error": 0},
-	{"Title": "4. Spread nut butter on tortilla\n", "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 3:\n",
-																							 "SubSteps": [{
-																								 "Title": "1. Take the paper towel\n",
-																								 "Done": 0,
-																								 "NotSure": 0,
-																								 "Error": 0},
-																								 {
-																									 "Title": "2. Clean the butter knife using paper towel\n",
-																									 "Done": 0,
-																									 "NotSure": 0,
-																									 "Error": 0}]},
-							{"Title": "Step 4:\n",
-							 "SubSteps": [{"Title": "1. Take butter knife\n", "Done": 0, "NotSure": 0, "Error": 0},
-										  {"Title": "2. Take jelly jar\n", "Done": 0, "NotSure": 0, "Error": 0},
-										  {"Title": "3. Scoop jelly from jelly jar using butter knife\n", "Done": 0,
-										   "NotSure": 0, "Error": 0},
-										  {"Title": "4. Spread jelly on tortilla\n", "Done": 0, "NotSure": 0,
-										   "Error": 0}]}, {"Title": "Step 5:\n", "SubSteps": [
-		{"Title": "1. Take the paper towel\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Clean the butter knife using paper towel\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-							{"Title": "Step 6:\n", "SubSteps": [
-								{"Title": "1. Tightly roll the tortilla\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-							{"Title": "Step 7:\n",
-							 "SubSteps": [{"Title": "1. Take the toothpicks\n", "Done": 0, "NotSure": 0, "Error": 0},
-										  {"Title": "2. Insert 5 toothpicks into the tortilla\n", "Done": 0,
-										   "NotSure": 0, "Error": 0}]}, {"Title": "Step 8:\n", "SubSteps": [
-		{"Title": "1. Trim the ends of the tortilla roll with the butter knife on both sides\n", "Done": 0,
-		 "NotSure": 0, "Error": 0}]}, {"Title": "Step 9:\n",
-									   "SubSteps": [{"Title": "1. Take floss\n", "Done": 0, "NotSure": 0, "Error": 0}, {
-										   "Title": "2. Place floss under the tortilla halfway between the two toothpicks\n",
-										   "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 10:\n", "SubSteps": [
-		{"Title": "1. Cross the two ends of the floss over the top of the tortilla roll\n", "Done": 0, "NotSure": 0,
-		 "Error": 0}, {"Title": "2. Pull the floss to cut the tortilla\n", "Done": 0, "NotSure": 0, "Error": 0}]},
-							{"Title": "Step 11:\n", "SubSteps": [{
-								"Title": "1. Continue slicing with floss to create the second pinwheel.  (Repeat 10)\n",
-								"Done": 0, "NotSure": 0, "Error": 0}]},
-							{"Title": "Step 12:\n", "SubSteps": [
-								{"Title": "1. Continue slicing with floss to create the third pinwheel.  (Repeat 10)\n",
-								 "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 13:\n", "SubSteps": [
-		{"Title": "1. Continue slicing with floss to create fourth and fifth pinwheels.  (Repeat 10)\n", "Done": 0,
-		 "NotSure": 0, "Error": 0}]}, {"Title": "Step 14:\n", "SubSteps": [
-		{"Title": "1. Take the plate\n", "Done": 0, "NotSure": 0, "Error": 0},
-		{"Title": "2. Place the pinwheels on the plate", "Done": 0, "NotSure": 0, "Error": 0}]}]
+COFFEE_STATE_TEMPLATE = [
+    {
+        "Title": "Recipe 1",
+        "Steps": [
+            {
+                "Step_ID": "Step 1:\n",
+                "SubSteps": [
+                    {"Description": "1. Take bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Fill water using measure bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Pour water\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 2:\n",
+                "SubSteps": [
+                    {"Description": "1. Take Filter cone\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Take mug\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Place the filter cone on top of mug\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 3:\n",
+                "SubSteps": [
+                    {"Description": "1. Take Paper filter\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Prepare Paper filter half\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Prepare Paper filter quarter\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Put Paper filter into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 4:\n",
+                "SubSteps": [
+                    {"Description": "1. Take the kitchen scale\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Take the coffee beans with container on the scale\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Pour the coffee beans into the grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Cover the lid of grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "7. Grind coffee beans\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "8. Take the dripper\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "9. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "10. Transfer the grounds to the filter cone\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 5:\n",
+                "SubSteps": [
+                    {"Description": "1. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Put the thermometer into kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Take out the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 6:\n",
+                "SubSteps": [
+                    {"Description": "1. Take the dripper with grounds coffee\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Pour a small amount of water into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 7:\n",
+                "SubSteps": [
+                    {"Description": "1. Pour the rest of the water over the grounds in a circular motion\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 8:\n",
+                "SubSteps": [
+                    {"Description": "1. Removing the dripper\n", "Done": 1, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Discard the paper filter and coffee grounds.", "Done": 1, "NotSure": 0, "Error": 0}
+                ]
+            }
+        ]
+    }
+]
 
-state_template = {COFFEE: COFFEE_STATE_TEMPLATE, PINWHEELS: PINWHEELS_STATE_TEMPLATE, MUGCAKE: MUGCAKE_STATE_TEMPLATE}
-sub_step_size = {COFFEE: 34, MUGCAKE: 45, PINWHEELS: 27}
+state_template = {COFFEE: COFFEE_STATE_TEMPLATE}
+sub_step_size = {COFFEE: 34}
 
 
 # ----------------------------------------------------------------------------------------------------------
