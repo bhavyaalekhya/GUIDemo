@@ -1,0 +1,153 @@
+[
+    {
+        "Title": "Recipe 1",
+        "Steps": [
+            {
+                "Step_ID": "Step 1:\n",
+                "SubSteps": [
+                    {"Description": "1. Take bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Fill water using measure bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Pour water\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 2:\n",
+                "SubSteps": [
+                    {"Description": "1. Take Filter cone\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Take mug\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Place the filter cone on top of mug\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 3:\n",
+                "SubSteps": [
+                    {"Description": "1. Take Paper filter\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Prepare Paper filter half\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Prepare Paper filter quarter\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Put Paper filter into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 4:\n",
+                "SubSteps": [
+                    {"Description": "1. Take the kitchen scale\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Take the coffee beans with container on the scale\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Pour the coffee beans into the grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Cover the lid of grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "7. Grind coffee beans\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "8. Take the dripper\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "9. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "10. Transfer the grounds to the filter cone\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 5:\n",
+                "SubSteps": [
+                    {"Description": "1. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Put the thermometer into kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Take out the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 6:\n",
+                "SubSteps": [
+                    {"Description": "1. Take the dripper with grounds coffee\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Pour a small amount of water into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 7:\n",
+                "SubSteps": [
+                    {"Description": "1. Pour the rest of the water over the grounds in a circular motion\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 8:\n",
+                "SubSteps": [
+                    {"Description": "1. Removing the dripper\n", "Done": 1, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Discard the paper filter and coffee grounds.", "Done": 1, "NotSure": 0, "Error": 0}
+                ]
+            }
+        ]
+    },
+    {
+        "Title": "Recipe 2",
+        "Steps": [
+            {
+                "Step_ID": "Step 1:\n",
+                "SubSteps": [
+                    {"Description": "1. Take bowl\n", "Done": 1, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Fill water using measure bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Pour water\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 2:\n",
+                "SubSteps": [
+                    {"Description": "1. Take Filter cone\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Take mug\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Place the filter cone on top of mug\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 3:\n",
+                "SubSteps": [
+                    {"Description": "1. Take Paper filter\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Prepare Paper filter half\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Prepare Paper filter quarter\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Put Paper filter into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 4:\n",
+                "SubSteps": [
+                    {"Description": "1. Take the kitchen scale\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Take the coffee beans with container on the scale\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Pour the coffee beans into the grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Cover the lid of grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "7. Grind coffee beans\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "8. Take the dripper\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "9. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "10. Transfer the grounds to the filter cone\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 5:\n",
+                "SubSteps": [
+                    {"Description": "1. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "2. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "3. Take the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "4. Put the thermometer into kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "5. Take out the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 6:\n",
+                "SubSteps": [
+                    {"Description": "1. Take the dripper with grounds coffee\n", "Done": 0, "NotSure": 0, "Error": 1},
+                    {"Description": "2. Pour a small amount of water into dripper\n", "Done": 0, "NotSure": 1, "Error": 0}
+                ]
+            },
+            {
+                "Step_ID": "Step 7:\n",
+                "SubSteps": [
+                    {"Description": "1. Pour the rest of the water over the grounds in a circular motion\n", "Done": 0, "NotSure": 0, "Error": 0}
+                ]
+            }
+        ]
+    }
+]

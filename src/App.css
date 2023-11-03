@@ -1,0 +1,17 @@
+/* App.css */
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+}
+
+.segment {
+  border: 1px solid #000;
+  height: 600px; /* Fixed segment height */
+}
+
+/* Optionally, you can apply the enlarged content style to .timelineContentContainer */
+.timelineContentContainer {
+  font-size: 200%;
+}

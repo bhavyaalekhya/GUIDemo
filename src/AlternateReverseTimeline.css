@@ -1,0 +1,32 @@
+.timeline {
+    transform: rotate(90deg); /* Rotate timeline 90 degrees anticlockwise */
+}
+
+.timelineContentContainer {
+    text-align: center;
+    transform: rotate(0deg);
+    position: relative;
+}
+
+.timelineContent {
+    display: inline-block;
+    transform: rotate(-90deg);
+    text-align: center;
+    min-width: 50px;
+    position: relative;
+    top: -16px; /* Adjust the top value to vertically align the content */
+}
+
+.timelineIcon {
+    transform: rotate(-90deg);
+}
+
+.custom-timeline-connector {
+    background-color: #bdbdbd; /* Change to the color you desire */
+    width: 32px; /* Adjust the width to increase the length of the connector */
+    height: 2px; /* Set the height of the connector */
+    margin-left: -16px; /* Adjust the margin to center the connector */
+    position: relative;
+    top: 10px; /* Adjust the top value to vertically align the connector */
+}
+  
