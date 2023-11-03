@@ -53,6 +53,9 @@ DONE = "Done"
 NOT_SURE = "NotSure"
 ERROR = "Error"
 SUB_STEPS = "SubSteps"
+STEPS = "Steps"
+STEP_ID = "Step_ID"
+DESCRIPTION = "Description"
 
 COFFEE_STATE_TEMPLATE = [
     {
@@ -203,14 +206,7 @@ def construct_update_recipe(recipe):
 
 
 def fetch_dummy_update_recipe(recipe):
-	rint = random.randint(1, 10)
-	if rint < 3:
-		recipe = COFFEE
-	elif 3 <= rint < 7:
-		recipe = MUGCAKE
-	else:
-		recipe = PINWHEELS
-	return recipe
+    return COFFEE
 
 
 def dummy_update_recipe(recipe):
@@ -249,12 +245,10 @@ def fetch_dummy_update_sub_steps(recipe, status):
 	rint = random.randint(1, 10)
 	if rint < 3:
 		recipe = COFFEE
-	elif 3 <= rint < 7:
-		recipe = MUGCAKE
-	else:
-		recipe = PINWHEELS
 	status = fetch_dummy_status_list(sub_step_size[recipe])
 	return status
+
+  # Return the input recipe if the random condition is not met
 
 
 def dummy_update_sub_steps(recipe, status):
@@ -307,10 +301,9 @@ def update_errors(recipe, errors):
 	server.send_message_to_all(construct_update_errors(recipe, errors))
 
 
-# rt_status = RepeatedTimer(5, dummy_update_sub_steps, "text", [])
-# rt_errors = RepeatedTimer(5, dummy_update_errors, COFFEE, "text")
-# rt_recipe = RepeatedTimer(5, dummy_update_recipe, "text")
-
+rt_status = RepeatedTimer(5, dummy_update_sub_steps, COFFEE, [])  # Pass the COFFEE constant and an empty list
+rt_errors = RepeatedTimer(5, dummy_update_errors, COFFEE, [])  # Pass the COFFEE constant and an empty list
+rt_recipe = RepeatedTimer(5, dummy_update_recipe, COFFEE)  # Pass only the COFFEE constant
 
 # -------------------------------------------------------------------------------------------------
 # --------------------------- Starting web socket server in another thread -----------------------
@@ -321,7 +314,17 @@ server = WebsocketServer(host='localhost', port=8000)
 server.set_fn_new_client(new_client)
 server.set_fn_client_left(client_left)
 server.set_fn_message_received(message_received)
-#update_recipe(RECIPE)
-#update_sub_steps(COFFEE, [])
-#update_errors(RECIPE, ERRORS)
-server.run_forever()
+try:
+    # Now, call the initial update functions directly to initialize the state
+    update_recipe(COFFEE)
+    update_sub_steps(COFFEE, [])
+    update_errors(COFFEE, [])
+
+    # Start the WebSocket server
+    server.run_forever()
+except KeyboardInterrupt:
+    # Stop the timers and server upon a keyboard interrupt
+    rt_status.stop()
+    rt_errors.stop()
+    rt_recipe.stop()
+    server.shutdown()
