@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Run the following command to install node_modules folder and package_lock.json
+
+### `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
