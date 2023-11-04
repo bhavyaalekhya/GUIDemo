@@ -10,8 +10,6 @@ function App({ recipes }) {
     height: '600px',
   };
 
-  console.log("Recipes: ------------------------------",recipes);
-
   const UPDATE_RECIPE = "update recipe";
   const UPDATE_STATUS = "update status";
   const UPDATE_ERRORS = "update errors";
@@ -26,7 +24,6 @@ function App({ recipes }) {
         Errors: recipe.Details.Errors || []
       });
     });
-    console.log("Map Value:",map);
     return map;
   };
 
@@ -37,7 +34,6 @@ function App({ recipes }) {
 
   useEffect(() => {
     recipes.forEach((recipe) => {
-      console.log(recipe);
       if (recipe.Type === UPDATE_RECIPE) {
         const existingRecipe = recipeMap.get(recipe.Details.Recipe);
         if (existingRecipe) {
