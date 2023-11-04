@@ -57,87 +57,90 @@ STEPS = "Steps"
 STEP_ID = "Step_ID"
 DESCRIPTION = "Description"
 
-COFFEE_STATE_TEMPLATE = [
-    {
-        "Title": "Recipe 1",
-        "Steps": [
-            {
-                "Step_ID": "Step 1:\n",
-                "SubSteps": [
-                    {"Description": "1. Take bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Fill water using measure bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "3. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "4. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "5. Pour water\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 2:\n",
-                "SubSteps": [
-                    {"Description": "1. Take Filter cone\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Take mug\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "3. Place the filter cone on top of mug\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 3:\n",
-                "SubSteps": [
-                    {"Description": "1. Take Paper filter\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Prepare Paper filter half\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "3. Prepare Paper filter quarter\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "4. Put Paper filter into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 4:\n",
-                "SubSteps": [
-                    {"Description": "1. Take the kitchen scale\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Take the coffee beans with container on the scale\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "3. Take the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "4. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "5. Pour the coffee beans into the grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "6. Cover the lid of grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "7. Grind coffee beans\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "8. Take the dripper\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "9. Open the coffee grinder\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "10. Transfer the grounds to the filter cone\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 5:\n",
-                "SubSteps": [
-                    {"Description": "1. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "3. Take the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "4. Put the thermometer into kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "5. Take out the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 6:\n",
-                "SubSteps": [
-                    {"Description": "1. Take the dripper with grounds coffee\n", "Done": 0, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Pour a small amount of water into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 7:\n",
-                "SubSteps": [
-                    {"Description": "1. Pour the rest of the water over the grounds in a circular motion\n", "Done": 0, "NotSure": 0, "Error": 0}
-                ]
-            },
-            {
-                "Step_ID": "Step 8:\n",
-                "SubSteps": [
-                    {"Description": "1. Removing the dripper\n", "Done": 1, "NotSure": 0, "Error": 0},
-                    {"Description": "2. Discard the paper filter and coffee grounds.", "Done": 1, "NotSure": 0, "Error": 0}
-                ]
-            }
-        ]
-    }
-]
+COFFEE_STATE_TEMPLATE = [{"Title": "Step 1:\n",
+						  "SubSteps": [{"Title": "1. Take bowl\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "2. Fill water using measure bowl\n", "Done": 0, "NotSure": 0,
+										"Error": 0}, {"Title": "3. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "4. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "5. Pour water\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}]},
+						 {"Title": "Step 2:\n",
+						  "SubSteps": [{"Title": "1. Take Filter cone\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "2. Take mug\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "3. Place the filter cone on top of mug\n", "Done": 0, "NotSure": 0,
+										"Error": 0}]}, {"Title": "Step 3:\n", "SubSteps": [
+		{"Title": "1. Take Paper filter\n", "Done": 0, "NotSure": 0, "Error": 0},
+		{"Title": "2. Prepare Paper filter half\n", "Done": 0, "NotSure": 0, "Error": 0},
+		{"Title": "3. Prepare Paper filter quarter\n", "Done": 0, "NotSure": 0, "Error": 0},
+		{"Title": "4. Put Paper filter into dripper\n", "Done": 0, "NotSure": 0, "Error": 0}]}, {"Title": "Step 4:\n",
+																								 "SubSteps": [{
+																									 "Title": "1. Take the kitchen scale\n",
+																									 "Done": 0,
+																									 "NotSure": 0,
+																									 "Error": 0},
+																									 {
+																										 "Title": "2. Take the coffee beans with container on the scale\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "3. Take the coffee grinder\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "4. Open the coffee grinder\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "5. Pour the coffee beans into the grinder\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "6. Cover the lid of grinder\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "7. Grind coffee beans\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "8. Take the dripper\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "9. Open the coffee grinder\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0},
+																									 {
+																										 "Title": "10. Transfer the grounds to the filter cone\n",
+																										 "Done": 0,
+																										 "NotSure": 0,
+																										 "Error": 0}]},
+						 {"Title": "Step 5:\n",
+						  "SubSteps": [{"Title": "1. Take kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "2. Open the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "3. Take the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "4. Put the thermometer into kettle\n", "Done": 0, "NotSure": 0,
+										"Error": 0},
+									   {"Title": "5. Take out the thermometer\n", "Done": 0, "NotSure": 0, "Error": 0},
+									   {"Title": "6. Close the lid of kettle\n", "Done": 0, "NotSure": 0, "Error": 0}]},
+						 {"Title": "Step 6:\n", "SubSteps": [
+							 {"Title": "1. Take the dripper with grounds coffee\n", "Done": 0, "NotSure": 0,
+							  "Error": 0},
+							 {"Title": "2. Pour a small amount of water into dripper\n", "Done": 0, "NotSure": 0,
+							  "Error": 0}]}, {"Title": "Step 7:\n", "SubSteps": [
+		{"Title": "1. Pour the rest of the water over the grounds in a circular motion\n", "Done": 0, "NotSure": 0,
+		 "Error": 0}]}, {"Title": "Step 8:\n",
+						 "SubSteps": [{"Title": "1. Removing the dripper\n", "Done": 0, "NotSure": 0, "Error": 0},
+									  {"Title": "2. Discard the paper filter and coffee grounds.", "Done": 0,
+									   "NotSure": 0, "Error": 0}]}]
 
 state_template = {COFFEE: COFFEE_STATE_TEMPLATE}
 sub_step_size = {COFFEE: 34}
@@ -161,14 +164,13 @@ def build_recipe_from_template(recipe, status):
 				sub_step[NOT_SURE] = 0
 				sub_step[ERROR] = 0
 				if status[sub_step_id] == 0:
-					sub_step[NOT_SURE] = 1
+					sub_step[NOT_SURE] = 0
 				elif status[sub_step_id] == -1:
 					sub_step[ERROR] = 1
 				elif status[sub_step_id] == 1:
-					sub_step[DONE] = 1
+					sub_step[DONE] = 2
 				sub_step_id = sub_step_id + 1
-		return json.dumps(recipe_json_obj)
-
+		return recipe_json_obj
 
 # ---------------------------------------------------------------------------------------------------------
 #  ---------------------------------- SERVER STARTUP CALLS  ----------------------------------------------
@@ -206,7 +208,7 @@ def construct_update_recipe(recipe):
 
 
 def fetch_dummy_update_recipe(recipe):
-    return COFFEE
+    return recipe
 
 
 def dummy_update_recipe(recipe):
@@ -230,7 +232,6 @@ def construct_update_sub_steps(recipe, status):
 	details = {RECIPE: recipe, RECIPE_STATE: build_recipe_from_template(recipe, status)}
 	message[DETAILS] = details
 	message_json = json.dumps(message)
-	print(message_json)
 	return message_json
 
 
@@ -268,7 +269,7 @@ def update_sub_steps(recipe, status):
 # ---------------------------------------------------------------------------------------------------------
 
 def construct_update_errors(recipe, errors):
-	message = {TYPE: UPDATE_ERRORS}
+	message = {TYPE: UPDATE_ERRORS} 
 	details = {RECIPE: recipe, ERRORS: errors}
 	message[DETAILS] = details
 	message_json = json.dumps(message)
