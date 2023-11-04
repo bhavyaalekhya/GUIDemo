@@ -35,11 +35,6 @@ const Main = () => {
     const socket = setupWebSocket(setRecipes);
 
     // Clean up the WebSocket connection when this component is unmounted
-    return () => {
-      if (socket) {
-        socket.close();
-      }
-    };
   }, []);
 
   return (
@@ -53,4 +48,3 @@ ReactDOM.render(
   <Main />,
   document.getElementById('root')
 );
-
