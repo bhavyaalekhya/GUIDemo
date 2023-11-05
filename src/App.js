@@ -7,7 +7,7 @@ function App({ recipes }) {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    height: '600px',
+    height: 'auto',
   };
 
   const UPDATE_RECIPE = "update recipe";
