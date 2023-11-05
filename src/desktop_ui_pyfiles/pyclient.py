@@ -45,13 +45,10 @@ sub_step_state_template_map = {
 
 def build_recipe_step_state_from_template(recipe, step_status):
 	recipe_step_state_template = step_state_template_map[recipe]
-	if len(step_status) == 0:
-		print("Starting recipe so status does not matter")
-		return recipe_step_state_template
-	recipe_json_obj = json.loads(json.dumps(step_state_template))
+	recipe_json_obj = json.loads(json.dumps(recipe_step_state_template))
 	step_id = 0
 	for step in recipe_json_obj:
-		step[const.STATUS] = step_status[step_id]
+		step[const.STATE] = step_status[step_id]
 		step_id = step_id + 1
 	return json.dumps(recipe_json_obj)
 
@@ -61,8 +58,8 @@ def build_recipe_sub_step_status_from_template(recipe, sub_step_status):
 	recipe_sub_step_obj = json.loads(json.dumps(recipe_sub_step_status_template))
 	sub_step_id = 0
 	for step in recipe_sub_step_obj:
-		for sub_step in step:
-			sub_step[const.STATUS] = sub_step_status[sub_step_id]
+		for sub_step in step[const.SUB_STEPS]:
+			sub_step[const.STATE] = sub_step_status[sub_step_id]
 			sub_step_id = sub_step_id + 1
 	return json.dumps(recipe_sub_step_obj)
 
@@ -114,9 +111,12 @@ class WSClient:
 	def close(self):
 		self.ws.close()
 	
+	# State : 0 -> Not Done, 1 -> Error, 2 -> Done
 	def update_recipe_step_status(self, recipe_list: list, step_status_list: list):
 		self.ws.send(construct_update_recipe_steps(recipe_list, step_status_list))
 	
+	# State : 0 -> Not Done, 1 -> In Progress, 2 -> Done, 3 -> Missing, 4 -> Ordering,
+	# 5 -> Technique, 6 -> Preparation
 	def update_recipe_sub_step_status(self, recipe_list: list, sub_step_status_list: list):
 		self.ws.send(construct_update_recipe_sub_steps(recipe_list, sub_step_status_list))
 	

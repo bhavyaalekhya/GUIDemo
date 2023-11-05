@@ -1,5 +1,6 @@
 import os
 import json
+from constants import Constants as const
 
 
 def preprocess_step_files(recipe_step_directory, output_step_template_directory):
@@ -11,7 +12,10 @@ def preprocess_step_files(recipe_step_directory, output_step_template_directory)
 			for line in file:
 				line = line.strip()
 				# State : 0 -> Not Done, 1 -> Error, 2 -> Done
-				item = {"step": line, "state": 0}
+				item = {
+					const.STEP: line,
+					const.STATE: 0
+				}
 				step_template_list.append(item)
 		
 		# Save the list as a json file
@@ -45,14 +49,14 @@ def preprocess_sub_step_files(recipe_sub_step_directory, output_sub_step_templat
 					# State : 0 -> Not Done, 1 -> In Progress, 2 -> Done, 3 -> Missing, 4 -> Ordering,
 					# 5 -> Technique, 6 -> Preparation
 					sub_step_dict = {
-						"sub_step": sub_step_description,
-						"state": 0
+						const.SUB_STEP: sub_step_description,
+						const.STATE: 0
 					}
 					sub_step_dict_list.append(sub_step_dict)
 				
 				recipe_state_dict_list.append({
-					"step": step_description,
-					"sub_steps": sub_step_dict_list
+					const.STEP: step_description,
+					const.SUB_STEPS: sub_step_dict_list
 				})
 		
 		# Save the dictionary as a json file
