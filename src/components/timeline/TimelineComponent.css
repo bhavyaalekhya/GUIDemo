@@ -1,0 +1,32 @@
+.timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.timeline-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.timeline-marker.active {
+    background-color: green;
+}
+
+.timeline-marker.inactive {
+    background-color: red;
+}
+
+.timeline-content {
+    max-width: 100px;
+}

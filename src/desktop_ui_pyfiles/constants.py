@@ -8,8 +8,9 @@ class Constants:
 	TYPE = "type"
 	RECIPE = "recipe"
 	DETAILS = "details"
-	RECIPE_STATE = "recipe_state"
-	RECIPE_SUB_STEP_STATE = "recipe_sub_step_state"
+	
+	RECIPE_STATES = "recipe_states"
+	RECIPE_SUB_STEP_STATES = "recipe_sub_step_states"
 	
 	SUB_STEPS = "sub_steps"
 	STEPS = "steps"

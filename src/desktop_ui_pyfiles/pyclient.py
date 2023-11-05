@@ -45,12 +45,12 @@ sub_step_state_template_map = {
 
 def build_recipe_step_state_from_template(recipe, step_status):
 	recipe_step_state_template = step_state_template_map[recipe]
-	recipe_json_obj = json.loads(json.dumps(recipe_step_state_template))
+	recipe_step_obj = json.loads(json.dumps(recipe_step_state_template))
 	step_id = 0
-	for step in recipe_json_obj:
+	for step in recipe_step_obj:
 		step[const.STATE] = step_status[step_id]
 		step_id = step_id + 1
-	return json.dumps(recipe_json_obj)
+	return recipe_step_obj
 
 
 def build_recipe_sub_step_status_from_template(recipe, sub_step_status):
@@ -61,7 +61,7 @@ def build_recipe_sub_step_status_from_template(recipe, sub_step_status):
 		for sub_step in step[const.SUB_STEPS]:
 			sub_step[const.STATE] = sub_step_status[sub_step_id]
 			sub_step_id = sub_step_id + 1
-	return json.dumps(recipe_sub_step_obj)
+	return recipe_sub_step_obj
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ def construct_update_recipe_steps(recipe_list: list, step_status_list: list):
 	for recipe, step_status in zip(recipe_list, step_status_list):
 		recipe_step_status_dict = {
 			const.RECIPE: recipe,
-			const.RECIPE_STATE: build_recipe_step_state_from_template(recipe, step_status)
+			const.RECIPE_STATES: build_recipe_step_state_from_template(recipe, step_status)
 		}
 		recipe_step_status_dict_list.append(recipe_step_status_dict)
 	
@@ -90,7 +90,8 @@ def construct_update_recipe_sub_steps(recipe_list, sub_step_status_list):
 	for recipe, sub_step_status in zip(recipe_list, sub_step_status_list):
 		recipe_step_status_dict = {
 			const.RECIPE: recipe,
-			const.RECIPE_SUB_STEP_STATE: build_recipe_sub_step_status_from_template(recipe, sub_step_status)
+			
+			const.RECIPE_SUB_STEP_STATES: build_recipe_sub_step_status_from_template(recipe, sub_step_status)
 		}
 		recipe_sub_step_status_dict_list.append(recipe_step_status_dict)
 	

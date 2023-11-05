@@ -1,87 +1,85 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import AlternateReverseTimeline from './AlternateReverseTimeline';
 
-function App({ recipes }) {
-  const segmentStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    height: 'auto',
-  };
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Overview from "./components/overview/Overview";
+import Home from "./components/home/Home";
+import {w3cwebsocket} from "websocket";
 
-  const UPDATE_RECIPE = "update recipe";
-  const UPDATE_STATUS = "update status";
-  const UPDATE_ERRORS = "update errors";
 
-  const initializeRecipeMap = (recipes) => {
-    let map = new Map();
-    recipes.forEach((recipe) => {
-      console.log("Type:",typeof(recipe.Details.RecipeState));
-      map.set(recipe.Details.Recipe, {
-        Recipe: recipe.Details.Recipe,
-        RecipeState: recipe.Details.RecipeState, // Assuming RecipeState is a JSON string
-        Errors: recipe.Details.Errors || []
-      });
-    });
-    return map;
-  };
-
-  initializeRecipeMap(recipes);
-
-  // Initialize recipeMap state with recipes prop
-  const [recipeMap, setRecipeMap] = useState(() => initializeRecipeMap(recipes));
-
-  useEffect(() => {
-    recipes.forEach((recipe) => {
-      if (recipe.Type === UPDATE_RECIPE) {
-        const existingRecipe = recipeMap.get(recipe.Details.Recipe);
-        if (existingRecipe) {
-          // Update the existing recipe
-          existingRecipe.RecipeState = recipe.Details.RecipeState;
-        } else {
-          // Add a new recipe to the map
-          const newRecipe = {
-            Recipe: recipe.Details.Recipe,
-            RecipeState: recipe.Details.RecipeState,
-          };
-          setRecipeMap((prevRecipeMap) => new Map(prevRecipeMap.set(recipe.Details.Recipe, newRecipe)));
-        }
-      } else if (recipe.Type === UPDATE_STATUS) {
-        const existingRecipe = recipeMap.get(recipe.Details.Recipe);
-        if (existingRecipe) {
-          existingRecipe.RecipeState = recipe.Details.RecipeState;
-        } else {
-          const newRecipe = {
-            Recipe: recipe.Details.Recipe,
-            RecipeState: recipe.Details.RecipeState,
-          };
-          setRecipeMap((prevRecipeMap) => new Map(prevRecipeMap.set(recipe.Details.Recipe, newRecipe)));
-        }
-      } else if (recipe.Type === UPDATE_ERRORS) {
-        const existingRecipe = recipeMap.get(recipe.Details.Recipe);
-        if (existingRecipe) {
-          existingRecipe.Errors = recipe.Details.Errors;
-        } else {
-          const newRecipe = {
-            Recipe: recipe.Details.Recipe,
-            RecipeState: [],
-            Errors: recipe.Details.Errors,
-          };
-          setRecipeMap((prevRecipeMap) => new Map(prevRecipeMap.set(recipe.Details.Recipe, newRecipe)));
-        }
-      }
-    });
-  }, [recipes, recipeMap]);
+function App() {
+    
+    const [recipeStepStates, setRecipeStepStates] = useState([]);
+    const [recipeSubStepStates, setRecipeSubStepStates] = useState([]);
+    
+    const UPDATE_RECIPE_STEP_STATES = "update_recipe_step_states"
+    const UPDATE_RECIPE_SUB_STEP_STATES = "update_recipe_sub_step_states"
+    
+    
+    useEffect(() => {
+        const web_client = new w3cwebsocket('ws://localhost:8000')
+    
+        web_client.onopen = () => console.log("Connected to WebSocket");
+    
+        web_client.onmessage = (message) => {
+            const server_message = JSON.parse(message.data);
+            const message_type  = server_message.type;
+    
+            // console.log(server_message)
+            if (message_type === UPDATE_RECIPE_STEP_STATES){
+                console.log(server_message?.details)
+                setRecipeStepStates(server_message?.details)
+            } else if (message_type === UPDATE_RECIPE_SUB_STEP_STATES){
+                console.log(JSON.parse(server_message?.details))
+                setRecipeSubStepStates(JSON.parse(server_message?.details))
+            }
+        };
+        
+        web_client.onerror = (event) => {
+            console.error("WebSocket error:", event);
+        };
+        
+        web_client.onclose = () => console.log("Disconnected from WebSocket");
+        
+        return () => web_client.close();
+    }, []);
+    
 
   return (
-    <div className="App">
-      {[...recipeMap.values()].map((recipe) => (
-        <div key={recipe.Recipe} className="segment" style={segmentStyle}>
-          <AlternateReverseTimeline steps={recipe.RecipeState} />
-        </div>
-      ))}
-    </div>
+      <BrowserRouter>
+          <div className="App">
+                <Routes>
+                    <Route
+                        exact
+                        path="/"
+                        element={
+                            <Home
+                                recipeStepStates={recipeStepStates}
+                                recipeSubStepStates={recipeSubStepStates}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/timeline"
+                        element={
+                            <Home
+                                recipeStepStates={recipeStepStates}
+                                recipeSubStepStates={recipeSubStepStates}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/overview"
+                        element={
+                            <Overview
+                                recipeStepStates={recipeStepStates}
+                                recipeSubStepStates={recipeSubStepStates}
+                            />
+                        }
+                    />
+                </Routes>
+          </div>
+      </BrowserRouter>
   );
 }
 
