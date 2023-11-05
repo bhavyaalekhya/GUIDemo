@@ -21,8 +21,6 @@ const setupWebSocket = (setRecipes) => {
       }
     };
   
-    // ...
-  
     return socket; // Return socket if you need to send messages to the server
   };
   
