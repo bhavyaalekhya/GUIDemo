@@ -1,14 +1,29 @@
 .timeline-container {
+    border: 2px solid #333; /* Dark grey border */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 
+
 .timeline-item {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 10px;
+    background-color: #fff; /* White background */
+    border-radius: 5px; /* Slightly rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .timeline-marker {
@@ -29,4 +44,26 @@
 
 .timeline-content {
     max-width: 100px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%; /* Adjust if your marker is not centered */
+    top: 0;
+    bottom: -20px; /* Adjust based on your design */
+    width: 2px; /* Width of the connecting line */
+    background-color: #000; /* Color of the line */
+    z-index: -1; /* Ensure it's behind the markers */
+}
+
+.timeline-marker.state-0 {
+    background-color: gray; /* Color for state 0 */
+}
+
+.timeline-marker.state-1 {
+    background-color: blue; /* Color for state 1 */
+}
+
+.timeline-marker.state-2 {
+    background-color: green; /* Color for state 2 */
 }

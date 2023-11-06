@@ -88,20 +88,19 @@ def construct_update_recipe_steps(recipe_list: list, step_status_list: list):
 def construct_update_recipe_sub_steps(recipe_list, sub_step_status_list):
 	recipe_sub_step_status_dict_list = []
 	for recipe, sub_step_status in zip(recipe_list, sub_step_status_list):
-		recipe_step_status_dict = {
+		recipe_sub_step_status_dict = {
 			const.RECIPE: recipe,
-			
 			const.RECIPE_SUB_STEP_STATES: build_recipe_sub_step_status_from_template(recipe, sub_step_status)
 		}
-		recipe_sub_step_status_dict_list.append(recipe_step_status_dict)
+		recipe_sub_step_status_dict_list.append(recipe_sub_step_status_dict)
 	
 	message = {
-		const.TYPE: const.UPDATE_RECIPE_STEP_STATES,
-		const.DETAILS: recipe_sub_step_status_dict_list
+		const.TYPE: const.UPDATE_RECIPE_SUB_STEP_STATES,
+		const.DETAILS: json.dumps(recipe_sub_step_status_dict_list)
 	}
 	message_json = json.dumps(message)
+	# return message
 	return message_json
-
 
 class WSClient:
 	
@@ -190,7 +189,7 @@ class WSClient:
 def send_dummy_updates():
 	wsclient = WSClient()
 	for i in range(100):
-		wsclient.dummy_update_steps()
+		# wsclient.dummy_update_steps()
 		time.sleep(3)
 		wsclient.dummy_update_sub_steps()
 	wsclient.close()

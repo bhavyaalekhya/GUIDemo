@@ -15,7 +15,6 @@ function App() {
     const UPDATE_RECIPE_STEP_STATES = "update_recipe_step_states"
     const UPDATE_RECIPE_SUB_STEP_STATES = "update_recipe_sub_step_states"
     
-    
     useEffect(() => {
         const web_client = new w3cwebsocket('ws://localhost:8000')
     
@@ -24,25 +23,25 @@ function App() {
         web_client.onmessage = (message) => {
             const server_message = JSON.parse(message.data);
             const message_type  = server_message.type;
-    
+        
             // console.log(server_message)
             if (message_type === UPDATE_RECIPE_STEP_STATES){
-                console.log(server_message?.details)
+                // console.log(server_message?.details)
                 setRecipeStepStates(server_message?.details)
             } else if (message_type === UPDATE_RECIPE_SUB_STEP_STATES){
-                console.log(JSON.parse(server_message?.details))
+                // console.log(server_message?.details)
                 setRecipeSubStepStates(JSON.parse(server_message?.details))
             }
         };
-        
+    
         web_client.onerror = (event) => {
-            console.error("WebSocket error:", event);
+            console.error("WebSocket error:");
         };
-        
+    
         web_client.onclose = () => console.log("Disconnected from WebSocket");
         
-        return () => web_client.close();
-    }, []);
+        
+    });
     
 
   return (
