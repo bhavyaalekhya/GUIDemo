@@ -1,6 +1,9 @@
+/* Merged Timeline Styles */
+
+/* Container for the entire timeline */
 .timeline-container {
     border: 2px solid #333; /* Dark grey border */
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9; /* Light grey background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Subtle shadow */
@@ -11,59 +14,61 @@
     position: relative;
 }
 
-
+/* Individual timeline items */
 .timeline-item {
     border: 1px solid #ddd; /* Light grey border */
     padding: 10px;
     background-color: #fff; /* White background */
     border-radius: 5px; /* Slightly rounded corners */
-    margin-bottom: 10px; /* Space between items */
+    margin: 20px; /* Space between items */
     box-shadow: 0px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     position: relative;
+    word-wrap: break-word; /* Ensures text breaks to prevent overflow */
+    min-height: 180px; /* Adjust this value as needed for consistent height */
+    flex: 1; /* This will make items stretch to the same height */
+    z-index: 2;
 }
 
+/* Line between timeline items */
+.timeline-line {
+    position: absolute;
+    left: 0; /* Align the line to the left edge of the container */
+    right: 0; /* Align the line to the right edge of the container */
+    height: 2px; /* Line thickness */
+    background-color: #000; /* Line color */
+    z-index: 0; /* Ensures the line is behind the items */
+    margin: 40px;
+}
+
+
+/* Marker for the timeline items */
 .timeline-marker {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: grey;
     margin-bottom: 10px;
+    z-index: 1;
 }
 
-.timeline-marker.active {
-    background-color: green;
-}
-
-.timeline-marker.inactive {
-    background-color: red;
-}
-
+/* Content within each timeline item */
 .timeline-content {
-    max-width: 100px;
+    max-width: 100px; /* Adjust the width as needed */
 }
 
-.timeline-line {
-    position: absolute;
-    left: 50%; /* Adjust if your marker is not centered */
-    top: 0;
-    bottom: -20px; /* Adjust based on your design */
-    width: 2px; /* Width of the connecting line */
-    background-color: #000; /* Color of the line */
-    z-index: -1; /* Ensure it's behind the markers */
-}
-
+/* Styles for the state of each marker */
 .timeline-marker.state-0 {
-    background-color: gray; /* Color for state 0 */
+    background-color: #bee5eb; /* Color for state 0 */
 }
 
 .timeline-marker.state-1 {
-    background-color: blue; /* Color for state 1 */
+    background-color: #f5c6cb; /* Color for state 1 */
 }
 
 .timeline-marker.state-2 {
-    background-color: green; /* Color for state 2 */
+    background-color: #d4edda; /* Color for state 2 */
 }

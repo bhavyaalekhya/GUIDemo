@@ -41,6 +41,8 @@
     margin-bottom: 8px;
     border-radius: 4px; /* Rounded corners */
     background-color: #fff; /* White background */
+    display: flex;
+    justify-content: space-between;
 }
 
 .subStep.state-0 { background-color: #f8d7da; } /* Example color for state 0 */
@@ -51,3 +53,12 @@
 .subStep.state-5 { background-color: #bee5eb; } /* Example color for state 5 */
 .subStep.state-6 { background-color: #f5c6cb; } /* Example color for state 6 */
 
+
+.subStep .subStepText {
+    text-align: left;
+}
+
+.subStep .subStepState {
+    text-align: right;
+}
+  

@@ -189,7 +189,7 @@ class WSClient:
 def send_dummy_updates():
 	wsclient = WSClient()
 	for i in range(100):
-		# wsclient.dummy_update_steps()
+		wsclient.dummy_update_steps()
 		time.sleep(3)
 		wsclient.dummy_update_sub_steps()
 	wsclient.close()

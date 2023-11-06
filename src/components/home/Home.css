@@ -1,0 +1,20 @@
+.homeContainer {
+    width: 100%; /* Ensures the container spans the entire width of the webpage */
+  }
+  
+.homeBodyContainer {
+    width: auto; /* Ensures the body container spans the entire width of the webpage */
+    display: flex;
+    flex-direction: column; /* Aligns the recipe segments in a column */
+    align-items: center; /* Centers the recipe segments horizontally */
+    padding: 20px; /* Add some padding around the segments */
+    border: 1px solid #ddd;
+    margin: 10px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+
+/* Styles for each recipe segment */
+  
+  /* Additional styling can be done for the AppBar and TimelineComponent as required. */
+  

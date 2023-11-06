@@ -35,7 +35,8 @@ const Overview = (props) => {
 							<h3>{step.step}</h3>
 							{step.sub_steps?.map((subStep, subIndex) => (
 								<div key={subIndex} className={`subStep state-${subStep.state}`}>
-									{subStep.sub_step} {subStep.state}
+									<span className="subStepText">{subStep.sub_step}</span>
+  									<span className="subStepState">{subStep.state}</span>
 								</div>
 							))}
 						</div>
