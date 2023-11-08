@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import AppBar from "../atoms/AppBar";
 import './Overview.css'; // Ensure this file includes the new CSS styles
 
+//0: "Not Done", 1: "In Progress", 2: "Done", 3: "Missing", 4: "Ordering", 5: "Technique", 6: "Preparation",
+
 const Overview = (props) => {
 	const { recipeStepStates, recipeSubStepStates } = props;
 	const [selectedRecipe, setSelectedRecipe] = useState(null);

@@ -45,13 +45,19 @@
     justify-content: space-between;
 }
 
-.subStep.state-0 { background-color: #f8d7da; } /* Example color for state 0 */
-.subStep.state-1 { background-color: #fff3cd; } /* Example color for state 1 */
-.subStep.state-2 { background-color: #d1ecf1; } /* Example color for state 2 */
-.subStep.state-3 { background-color: #d4edda; } /* Example color for state 3 */
-.subStep.state-4 { background-color: #c3e6cb; } /* Example color for state 4 */
-.subStep.state-5 { background-color: #bee5eb; } /* Example color for state 5 */
-.subStep.state-6 { background-color: #f5c6cb; } /* Example color for state 6 */
+/* White for not done
+Blue for in progress
+Other colors for errors */
+
+/*0: "Not Done", 1: "In Progress", 2: "Done", 3: "Missing", 4: "Ordering", 5: "Technique", 6: "Preparation",*/
+
+.subStep.state-0 { background-color: white; } /* Example color for state 0 */
+.subStep.state-1 { background-color: blue; color: white; } /* Example color for state 1 */
+.subStep.state-2 { background-color: green; color: white } /* Example color for state 2 */
+.subStep.state-3 { background-color: #ff3300; } /* Example color for state 3 */
+.subStep.state-4 { background-color: #9900cc; color: white; } /* Example color for state 4 */
+.subStep.state-5 { background-color: #ff9900; } /* Example color for state 5 */
+.subStep.state-6 { background-color: #993366; color: white; } /* Example color for state 6 */
 
 
 .subStep .subStepText {

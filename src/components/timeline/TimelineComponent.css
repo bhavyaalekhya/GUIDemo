@@ -60,15 +60,15 @@
     max-width: 100px; /* Adjust the width as needed */
 }
 
-/* Styles for the state of each marker */
+/* Styles for the state of each marker */ 
 .timeline-marker.state-0 {
-    background-color: #bee5eb; /* Color for state 0 */
+    background-color: gray; /* Color for state 0 */ /*gray*/
 }
 
 .timeline-marker.state-1 {
-    background-color: #f5c6cb; /* Color for state 1 */
+    background-color: red; /* Color for state 1 */ /*red*/
 }
 
 .timeline-marker.state-2 {
-    background-color: #d4edda; /* Color for state 2 */
+    background-color: green; /* Color for state 2 */ /*green*/
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import './TimelineComponent.css'; // Import your CSS file
 
+// 0 - Incomplete, 1 - Error Present, 2 - Complete
+
 const TimelineComponent = ({ steps }) => {
 
 	return (
