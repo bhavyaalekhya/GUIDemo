@@ -11,10 +11,10 @@ const Overview = (props) => {
 		0: "Not Done",
 		1: "In Progress",
 		2: "Done",
-		3: "Missing",
-		4: "Ordering",
-		5: "Technique",
-		6: "Preparation",
+		3: "Missing Error",
+		4: "Ordering Error",
+		5: "Technique Error",
+		6: "Preparation Error",
 		7: "Not Done"
 	};
 	
