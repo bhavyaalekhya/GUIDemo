@@ -9,6 +9,13 @@
     padding: 10px;
 }
 
+.gridContainer {
+    flex: 0.5; /* 50% of the parent container */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-auto-rows: 200px; /* Each row has a height of 200px */
+    gap: 10px; /* Adjust gap between grid items as needed */
+}
 
 .recipeBox {
     border: 1px solid #ddd; /* Light grey border */
@@ -67,4 +74,12 @@ Other colors for errors */
 .subStep .subStepState {
     text-align: right;
 }
-  
+
+.stateBox {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 5px; /* Padding inside the box */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    text-align: center; /* Center the text */
+}

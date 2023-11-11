@@ -2,11 +2,21 @@ import React, { useEffect, useState } from "react";
 import AppBar from "../atoms/AppBar";
 import './Overview.css'; // Ensure this file includes the new CSS styles
 
-//0: "Not Done", 1: "In Progress", 2: "Done", 3: "Missing", 4: "Ordering", 5: "Technique", 6: "Preparation",
-
 const Overview = (props) => {
 	const { recipeStepStates, recipeSubStepStates } = props;
 	const [selectedRecipe, setSelectedRecipe] = useState(null);
+
+	// State descriptions mapping
+	const stateDescriptions = {
+		0: "Not Done",
+		1: "In Progress",
+		2: "Done",
+		3: "Missing",
+		4: "Ordering",
+		5: "Technique",
+		6: "Preparation",
+		7: "Not Done"
+	};
 	
 	const handleRecipeClick = (recipe) => {
 		setSelectedRecipe(recipe);
@@ -24,7 +34,7 @@ const Overview = (props) => {
 			</div>
 			
 			<div className="overviewBodyContainer">
-				<div className="recipeSubStepStatesList">
+				<div className="gridContainer">
 					{recipeSubStepStates?.map((recipe, index) => (
 						<div key={index} className="recipeBox" onClick={() => handleRecipeClick(recipe)}>
 							{recipe?.recipe}
@@ -38,7 +48,9 @@ const Overview = (props) => {
 							{step.sub_steps?.map((subStep, subIndex) => (
 								<div key={subIndex} className={`subStep state-${subStep.state}`}>
 									<span className="subStepText">{subStep.sub_step}</span>
-  									<span className="subStepState">{subStep.state}</span>
+									<div className="stateBox">
+										{stateDescriptions[subStep.state]}
+									</div>
 								</div>
 							))}
 						</div>
