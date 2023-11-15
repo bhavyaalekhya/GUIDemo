@@ -24,10 +24,9 @@ const Home = (props) => {
 			<div className="homeBodyContainer">
 				{
 					recipeStepStates?.map((recipeStepState, listIndex) => (
-						<TimelineComponent key={listIndex} steps={recipeStepState.recipe_states} />
+						<TimelineComponent key={listIndex} steps={recipeStepState.recipe_states} name={recipeStepState.recipe} />
 					))
 				}
-			
 			</div>
 		</div>
 	);

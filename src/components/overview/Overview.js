@@ -33,7 +33,12 @@ const Overview = (props) => {
 				<AppBar />
 			</div>
 			
+			<h3>Click on the recipe card to update!</h3>
+
 			<div className="overviewBodyContainer">
+				{/* Instruction text placed here */}
+				
+
 				<div className="gridContainer">
 					{recipeSubStepStates?.map((recipe, index) => (
 						<div key={index} className="recipeBox" onClick={() => handleRecipeClick(recipe)}>
